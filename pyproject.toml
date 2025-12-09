@@ -1,0 +1,21 @@
+[project]
+name = "databricks-notebook-test"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyter-databricks-kernel",
+    "pyspark",
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["F821"]
+"notebooks/*.py" = ["F821"]
