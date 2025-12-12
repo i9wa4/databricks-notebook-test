@@ -5,12 +5,12 @@ requires-python = ">=3.12"
 dependencies = [
     # プロジェクト固有（DBR にないもの）
     "httpx",
-    "jupyter-databricks-kernel",
 ]
 
 [dependency-groups]
 dev = [
     "jupyter-databricks-kernel",
+    "jupyterlab",
     "nbclient",
     "pytest",
     "ruff",
@@ -38,6 +38,3 @@ select = ["E", "W", "F", "I", "B", "UP"]
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["F821"]
 "notebooks/*.py" = ["F821"]
-
-[tool.uv.sources]
-jupyter-databricks-kernel = { path = "../jupyter-databricks-kernel-issue-105-set-cwd-to-sync-directory", editable = true }
