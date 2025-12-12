@@ -4,16 +4,18 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     # プロジェクト固有（DBR にないもの）
-    # "some-custom-lib",
+    "httpx",
+    "jupyter-databricks-kernel",
 ]
 
 [dependency-groups]
 dev = [
-    # ローカル開発用
     "jupyter-databricks-kernel",
     "nbclient",
     "pytest",
     "ruff",
+]
+dbr = [
     # DBR 17.3 LTS プリインストール済み（ローカルで型チェック等に使用）
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
     "pandas==2.2.3",
@@ -36,3 +38,6 @@ select = ["E", "W", "F", "I", "B", "UP"]
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["F821"]
 "notebooks/*.py" = ["F821"]
+
+[tool.uv.sources]
+jupyter-databricks-kernel = { path = "../jupyter-databricks-kernel-issue-105-set-cwd-to-sync-directory", editable = true }
