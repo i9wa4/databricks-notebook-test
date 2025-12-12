@@ -23,6 +23,9 @@ dbr = [
     "pyspark==4.0.0",
 ]
 
+[tool.uv.sources]
+jupyter-databricks-kernel = { path = "../jupyter-databricks-kernel", editable = true }
+
 [tool.jupyter-databricks-kernel.sync]
 enabled = true
 source = "."
