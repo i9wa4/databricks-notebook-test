@@ -21,7 +21,7 @@ dbr = [
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
     "pandas==2.2.3",
     "numpy==2.1.3",
-    "pyspark==4.0.0",
+    "pyspark==4.0.1",
 ]
 
 # [tool.uv.sources]
