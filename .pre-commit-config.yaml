@@ -13,11 +13,6 @@ repos:
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
 
-  - repo: https://github.com/kynan/nbstripout
-    rev: 0.8.1
-    hooks:
-      - id: nbstripout
-
   - repo: local
     hooks:
       - id: gitleaks
@@ -68,3 +63,9 @@ repos:
         entry: mise exec -- rumdl fmt
         language: system
         types: [markdown]
+
+      - id: nbstripout
+        name: nbstripout
+        entry: mise exec -- uv run --no-sync nbstripout
+        language: system
+        types: [jupyter]
