@@ -8,9 +8,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dbr17 = [
-    # DBR 17.3 LTS preinstalled packages (for local type checking, etc.)
+dbr-17-3 = [
+    # DBR 17.3 LTS preinstalled packages
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
+    #
+    # Purpose:
+    # - Used for dependency resolution in uv.lock (not installed by uv sync)
+    # - Ensures compatibility with Databricks Runtime environment
+    # - Excluded from Renovate updates via matchDepTypes in renovate.json
     "matplotlib==3.10.0",
     "mlflow-skinny==3.0.1",
     "numpy==2.1.3",

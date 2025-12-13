@@ -423,7 +423,7 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
-dbr17 = [
+dbr-17-3 = [
     { name = "matplotlib" },
     { name = "mlflow-skinny" },
     { name = "numpy" },
@@ -447,16 +447,16 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx" },
-    { name = "matplotlib", marker = "extra == 'dbr17'", specifier = "==3.10.0" },
-    { name = "mlflow-skinny", marker = "extra == 'dbr17'", specifier = "==3.0.1" },
-    { name = "numpy", marker = "extra == 'dbr17'", specifier = "==2.1.3" },
-    { name = "pandas", marker = "extra == 'dbr17'", specifier = "==2.2.3" },
-    { name = "pyarrow", marker = "extra == 'dbr17'", specifier = "==19.0.1" },
-    { name = "pyspark", marker = "extra == 'dbr17'", specifier = "==4.0.0" },
-    { name = "scikit-learn", marker = "extra == 'dbr17'", specifier = "==1.6.1" },
-    { name = "scipy", marker = "extra == 'dbr17'", specifier = "==1.15.1" },
+    { name = "matplotlib", marker = "extra == 'dbr-17-3'", specifier = "==3.10.0" },
+    { name = "mlflow-skinny", marker = "extra == 'dbr-17-3'", specifier = "==3.0.1" },
+    { name = "numpy", marker = "extra == 'dbr-17-3'", specifier = "==2.1.3" },
+    { name = "pandas", marker = "extra == 'dbr-17-3'", specifier = "==2.2.3" },
+    { name = "pyarrow", marker = "extra == 'dbr-17-3'", specifier = "==19.0.1" },
+    { name = "pyspark", marker = "extra == 'dbr-17-3'", specifier = "==4.0.0" },
+    { name = "scikit-learn", marker = "extra == 'dbr-17-3'", specifier = "==1.6.1" },
+    { name = "scipy", marker = "extra == 'dbr-17-3'", specifier = "==1.15.1" },
 ]
-provides-extras = ["dbr17"]
+provides-extras = ["dbr-17-3"]
 
 [package.metadata.requires-dev]
 dev = [
