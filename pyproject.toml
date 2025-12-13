@@ -3,7 +3,7 @@ name = "databricks-notebook-test"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
-    # プロジェクト固有（DBR にないもの）
+    # Project-specific (not included in DBR)
     "httpx",
 ]
 
@@ -16,12 +16,17 @@ dev = [
     "pytest",
     "ruff",
 ]
-dbr = [
-    # DBR 17.3 LTS プリインストール済み（ローカルで型チェック等に使用）
+dbr17 = [
+    # DBR 17.3 LTS preinstalled packages (for local type checking, etc.)
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
-    "pandas==2.3.3",
-    "numpy==2.3.5",
-    "pyspark==4.0.1",
+    "matplotlib==3.10.0",
+    "mlflow-skinny==3.0.1",
+    "numpy==2.1.3",
+    "pandas==2.2.3",
+    "pyarrow==19.0.1",
+    "pyspark==4.0.0",
+    "scikit-learn==1.6.1",
+    "scipy==1.15.1",
 ]
 
 # [tool.uv.sources]
