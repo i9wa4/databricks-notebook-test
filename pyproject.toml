@@ -30,6 +30,7 @@ dbr-17-3 = [
 dev = [
     "jupyter-databricks-kernel",
     "jupyterlab",
+    "marimo",
     "nbclient",
     "nbstripout",
     "pytest",
@@ -54,3 +55,4 @@ select = ["E", "W", "F", "I", "B", "UP"]
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["F821"]
 "notebooks/*.py" = ["F821"]
+"marimo/*.py" = ["F821", "B018"]  # B018: marimo uses bare expressions for cell output
