@@ -19,7 +19,7 @@ dev = [
 dbr = [
     # DBR 17.3 LTS プリインストール済み（ローカルで型チェック等に使用）
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
-    "pandas==2.2.3",
+    "pandas==2.3.3",
     "numpy==2.3.5",
     "pyspark==4.0.1",
 ]
