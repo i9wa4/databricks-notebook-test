@@ -7,15 +7,7 @@ dependencies = [
     "httpx",
 ]
 
-[dependency-groups]
-dev = [
-    "jupyter-databricks-kernel",
-    "jupyterlab",
-    "nbclient",
-    "nbstripout",
-    "pytest",
-    "ruff",
-]
+[project.optional-dependencies]
 dbr17 = [
     # DBR 17.3 LTS preinstalled packages (for local type checking, etc.)
     # https://docs.databricks.com/aws/en/release-notes/runtime/17.3lts
@@ -27,6 +19,16 @@ dbr17 = [
     "pyspark==4.0.0",
     "scikit-learn==1.6.1",
     "scipy==1.15.1",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter-databricks-kernel",
+    "jupyterlab",
+    "nbclient",
+    "nbstripout",
+    "pytest",
+    "ruff",
 ]
 
 # [tool.uv.sources]

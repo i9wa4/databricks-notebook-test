@@ -6,7 +6,7 @@
   "packageRules": [
     {
       "description": "Pin DBR 17.3 LTS preinstalled packages",
-      "matchDepTypes": ["dependency-groups.dbr17"],
+      "matchDepTypes": ["project.optional-dependencies"],
       "enabled": false
     }
   ]
