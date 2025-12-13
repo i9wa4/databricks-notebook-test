@@ -333,7 +333,7 @@ dbr = [
     { name = "pyspark", specifier = "==4.0.0" },
 ]
 dev = [
-    { name = "jupyter-databricks-kernel" },
+    { name = "jupyter-databricks-kernel", editable = "../jupyter-databricks-kernel" },
     { name = "jupyterlab" },
     { name = "nbclient" },
     { name = "nbstripout" },
@@ -672,17 +672,29 @@ wheels = [
 
 [[package]]
 name = "jupyter-databricks-kernel"
-version = "1.1.5"
-source = { registry = "https://pypi.org/simple" }
+source = { editable = "../jupyter-databricks-kernel" }
 dependencies = [
     { name = "databricks-sdk" },
     { name = "ipykernel" },
     { name = "jupyter-client" },
     { name = "pathspec" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/77/689e90525d1d8b92d05a6a71f26eab331cccf3b6c00d00bb29b2c4be7288/jupyter_databricks_kernel-1.1.5.tar.gz", hash = "sha256:3181235f254c3e9a43fd9d007072d520318718874e4f8ed0e17b1bdb2c4e21e6", size = 146203, upload-time = "2025-12-12T20:37:08.932Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/52/1f/f5d84d98d4ce53267075f81676840b5a869a7a391236ce12a0f387026733/jupyter_databricks_kernel-1.1.5-py3-none-any.whl", hash = "sha256:c8602423ce30fb72b759bcd2c2dc2c30b700bcc1ef21689107a3496013e94afd", size = 30425, upload-time = "2025-12-12T20:37:07.287Z" },
+
+[package.metadata]
+requires-dist = [
+    { name = "databricks-sdk", specifier = ">=0.30.0,<1.0.0" },
+    { name = "ipykernel", specifier = ">=6.20.0" },
+    { name = "jupyter-client", specifier = ">=8.0.0" },
+    { name = "pathspec", specifier = ">=0.11.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "jupyterlab", specifier = ">=4.0.0" },
+    { name = "mypy", specifier = ">=1.0.0" },
+    { name = "pytest", specifier = ">=7.0.0" },
+    { name = "pytest-cov", specifier = ">=4.0.0" },
+    { name = "ruff", specifier = ">=0.14.0" },
 ]
 
 [[package]]
