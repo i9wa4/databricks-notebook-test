@@ -6,10 +6,12 @@ uv = "0.9.18"
 pre-commit = "4.5.0"
 
 # Aqua Tools
-"aqua:gitleaks/gitleaks"      = "8.30.0"
-"aqua:rhysd/actionlint"       = "1.7.9"
-"aqua:suzuki-shunsuke/pinact" = "3.6.0"
-"aqua:zizmorcore/zizmor"      = "1.18.0"
+"aqua:gitleaks/gitleaks"        = "8.30.0"
+"aqua:rhysd/actionlint"         = "1.7.9"
+"aqua:suzuki-shunsuke/ghalint"  = "1.5.4"
+"aqua:suzuki-shunsuke/ghatm"    = "1.0.0"
+"aqua:suzuki-shunsuke/pinact"   = "3.6.0"
+"aqua:zizmorcore/zizmor"        = "1.19.0"
 
 # Cargo Tools
 "cargo:rumdl" = "0.0.194"
