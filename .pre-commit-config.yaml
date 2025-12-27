@@ -54,30 +54,18 @@ repos:
 
       - id: ruff-check
         name: ruff check
-        entry: mise exec -- uv run --no-sync ruff check --fix
+        entry: mise exec -- uv run ruff check --fix
         language: system
         types: [python]
 
       - id: ruff-format
         name: ruff format
-        entry: mise exec -- uv run --no-sync ruff format
+        entry: mise exec -- uv run ruff format
         language: system
         types: [python]
 
-      - id: rumdl-check
-        name: rumdl check
-        entry: mise exec -- rumdl check
-        language: system
-        types: [markdown]
-
-      - id: rumdl-format
-        name: rumdl format
-        entry: mise exec -- rumdl fmt
-        language: system
-        types: [markdown]
-
       - id: nbstripout
         name: nbstripout
-        entry: mise exec -- uv run --no-sync nbstripout
+        entry: mise exec -- uv run nbstripout
         language: system
         types: [jupyter]
